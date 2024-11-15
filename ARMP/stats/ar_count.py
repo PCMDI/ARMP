@@ -64,20 +64,26 @@ def LFAR_count(
 
         freq_reg_mp = tag_reg_mpts.astype(int).sum(dim="time") / tag_reg_mpts.time_size
 
-        if tag_out_ts:
-            nc_out(da_occur_ts, "occur", "ts.nc", case_name, dir_out)
+        if tag_out_ts:  # noqa
+            nc_out(da_occur_ts, "occur", "ts.nc", case_name, dir_out)  # noqa
             # da_occur_ts.name = 'occur'
             # fn_out =  "_".join([case_name, da_occur_ts.name, 'ts.nc'])
             # da_occur_ts.to_netcdf(os.path.join(dir_out, fn_out))
 
-        if tag_out_map:
-            nc_out(freq_reg_mp, "freq", "mp.nc", case_name, dir_out)
+        if tag_out_map:  # noqa
+            nc_out(freq_reg_mp, "freq", "mp.nc", case_name, dir_out)  # noqa
             # freq_reg_mp.name = 'freq'
             # fn_out =  "_".join([case_name, freq_reg_mp.name, 'mp.nc'])
             # freq_reg_mp.to_netcdf(os.path.join(dir_out, fn_out))
 
-        if tag_out_map_ts:
-            nc_out(tag_reg_mpts, kwargs["fn_var_out"], "mpts.nc", case_name, dir_out)
+        if tag_out_map_ts:  # noqa
+            nc_out(
+                tag_reg_mpts,
+                kwargs["fn_var_out"],
+                "mpts.nc",
+                case_name,  # noqa
+                dir_out,  # noqa
+            )
             # tag_reg_mpts.name = 'tag'
             # fn_out =  "_".join([case_name, tag_reg_mpts.name, 'mpts.nc'])
             # tag_reg_mpts.to_netcdf(os.path.join(dir_out, fn_out))
@@ -117,20 +123,22 @@ def LFAR_count_mf(
 
     freq_reg_mp = tag_reg_mpts.astype(int).sum(dim="time") / tag_reg_mpts.time_size
 
-    if tag_out_ts:
-        nc_out(da_occur_ts, "occur", "ts.nc", case_name, dir_out)
+    if tag_out_ts:  # noqa
+        nc_out(da_occur_ts, "occur", "ts.nc", case_name, dir_out)  # noqa
         # da_occur_ts.name = 'occur'
         # fn_out =  "_".join([case_name, da_occur_ts.name, 'ts.nc'])
         # da_occur_ts.to_netcdf(os.path.join(dir_out, fn_out))
 
-    if tag_out_map:
-        nc_out(freq_reg_mp, "freq", "mp.nc", case_name, dir_out)
+    if tag_out_map:  # noqa
+        nc_out(freq_reg_mp, "freq", "mp.nc", case_name, dir_out)  # noqa
         # freq_reg_mp.name = 'freq'
         # fn_out =  "_".join([case_name, freq_reg_mp.name, 'mp.nc'])
         # freq_reg_mp.to_netcdf(os.path.join(dir_out, fn_out))
 
-    if tag_out_map_ts:
-        nc_out(tag_reg_mpts, kwargs["fn_var_out"], "mpts.nc", case_name, dir_out)
+    if tag_out_map_ts:  # noqa
+        nc_out(
+            tag_reg_mpts, kwargs["fn_var_out"], "mpts.nc", case_name, dir_out  # noqa
+        )
         # tag_reg_mpts.name = 'tag'
         # fn_out =  "_".join([case_name, tag_reg_mpts.name, 'mpts.nc'])
         # tag_reg_mpts.to_netcdf(os.path.join(dir_out, fn_out))

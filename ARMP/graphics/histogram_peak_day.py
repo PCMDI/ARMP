@@ -1,17 +1,18 @@
 import matplotlib
 
-matplotlib.use("Agg")
-import os
-from itertools import product
+matplotlib.use("Agg")  # noqa
 
-import numpy as np
-from matplotlib import pyplot as plt
+import os  # noqa
+from itertools import product  # noqa
 
-from ARMP.io.input import read_json_file
-from ARMP.io.output import update_dict_ref
-from ARMP.io.printting import str_fn, str_print
-from ARMP.lib.control import iter_list, iter_list_ref, make_case
-from ARMP.lib.convention import Case
+import numpy as np  # noqa
+from matplotlib import pyplot as plt  # noqa
+
+from ARMP.io.input import read_json_file  # noqa
+from ARMP.io.output import update_dict_ref  # noqa
+from ARMP.io.printting import str_fn, str_print  # noqa
+from ARMP.lib.control import iter_list, iter_list_ref, make_case  # noqa
+from ARMP.lib.convention import Case  # noqa
 
 
 def histogram_peak_day(

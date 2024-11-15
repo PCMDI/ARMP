@@ -16,4 +16,3 @@ fi
 # optional to install BlobStats
 
 echo "Installation complete!"
-

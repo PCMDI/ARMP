@@ -27,8 +27,8 @@ def Clim_count_mf(
     clim_reg_lf = freq_convert(clim_reg_lf, **kwargs)
 
     # read in AR tag data
-    case_name_tag = case_combi(case_name, clim_var_fn, "tag")
-    tag_reg_mpts = nc_in(tag_var_fn, "mpts.nc", case_name_tag, dir_out)
+    case_name_tag = case_combi(case_name, clim_var_fn, "tag")  # noqa
+    tag_reg_mpts = nc_in(tag_var_fn, "mpts.nc", case_name_tag, dir_out)  # noqa
 
     tag_reg_mpts, clim_reg_lf = match_calendar(tag_reg_mpts, clim_reg_lf)
 
@@ -36,7 +36,7 @@ def Clim_count_mf(
 
     try:
         clim_reg_mpts = regrid_coords_precision(clim_reg_mpts, tag_reg_mpts)
-    except RuntimeError as e:
+    except RuntimeError:
         clim_reg_mpts = match_coords_precision(clim_reg_mpts, tag_reg_mpts)
 
     # clim_reg_mpts = clim_reg_mpts.where(~np.isnan(tag_reg_mpts)).compute()
@@ -44,10 +44,12 @@ def Clim_count_mf(
 
     clim_reg_ts = domain_average_series(clim_reg_mpts)
 
-    if clim_out_ts:
-        nc_out(clim_reg_ts, kwargs["fn_var_out"], "ts.nc", case_name, dir_out)
+    if clim_out_ts:  # noqa
+        nc_out(clim_reg_ts, kwargs["fn_var_out"], "ts.nc", case_name, dir_out)  # noqa
 
-    if clim_out_map_ts:
-        nc_out(clim_reg_mpts, kwargs["fn_var_out"], "mpts.nc", case_name, dir_out)
+    if clim_out_map_ts:  # noqa
+        nc_out(
+            clim_reg_mpts, kwargs["fn_var_out"], "mpts.nc", case_name, dir_out  # noqa
+        )
 
     return clim_reg_ts
