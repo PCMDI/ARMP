@@ -8,7 +8,7 @@
 
 ## Reference 
 
-Dong, B., P. Ullrich, J. Lee, P. Gleckler, K. Chang, T. A. O’Brien, 2024: Evaluation of atmospheric rivers in reanalyses and climate models in a new metrics framework. Geoscientific Model Development (under review), preprint: [doi: 10.5194/gmd-2024-142](https://doi.org/10.5194/gmd-2024-142)
+Dong, B., Ullrich, P., Lee, J., Gleckler, P., Chang, K., and O'Brien, T. A.: A new metrics framework for quantifying and intercomparing atmospheric rivers in observations, reanalyses, and climate models, Geosci. Model Dev., 18, 961–976, https://doi.org/10.5194/gmd-18-961-2025, 2025.(https://doi.org/10.5194/gmd-18-961-2025)
 
 ## Documentation
 
