@@ -8,7 +8,7 @@
 
 ## Reference 
 
-Dong, B., Ullrich, P., Lee, J., Gleckler, P., Chang, K., and O'Brien, T. A.: A new metrics framework for quantifying and intercomparing atmospheric rivers in observations, reanalyses, and climate models, Geosci. Model Dev., 18, 961–976, https://doi.org/10.5194/gmd-18-961-2025, 2025.(https://doi.org/10.5194/gmd-18-961-2025)
+Dong, B., Ullrich, P., Lee, J., Gleckler, P., Chang, K., and O'Brien, T. A.: A new metrics framework for quantifying and intercomparing atmospheric rivers in observations, reanalyses, and climate models, Geosci. Model Dev., 18, 961–976, https://doi.org/10.5194/gmd-18-961-2025, 2025.
 
 ## Documentation
 
